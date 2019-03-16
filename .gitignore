@@ -1,0 +1,11 @@
+# UE4 Specific Ignores
+*/Intermediate/*
+*/Saved/*
+*/Binaries/*
+*/DerivedDataCache/*
+*.sln
+*.sdf
+*.suo
+
+
+*.vc.db
