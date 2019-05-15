@@ -4,20 +4,29 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "PlayerChar.generated.h"
+#include "Classes/Camera/CameraComponent.h"
+
+#include "TestChar.generated.h"
+
+
 
 UCLASS()
-class PROJECTARPG_API APlayerChar : public ACharacter
+class PROJECTARPG_API ATestChar : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	APlayerChar();
+	ATestChar();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditAnywhere, Category = "Components")
+	UStaticMeshComponent* AMesh;
+	UPROPERTY(EditAnywhere, Category = "Components")
+	UCameraComponent* Camera;
 
 public:	
 	// Called every frame
