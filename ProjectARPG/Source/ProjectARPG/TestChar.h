@@ -29,8 +29,12 @@ protected:
 	UCameraComponent* Camera;
 
 	//movement functions
+	void MoveForward(float amount);
+	void MoveRight(float amount);
 
 	//crouch function
+	void Turn(float amount);
+	void LookUp(float amount);
 
 public:	
 	// Called every frame

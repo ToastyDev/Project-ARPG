@@ -18,6 +18,19 @@ ATestChar::ATestChar()
 
 }
 
+void ATestChar::MoveForward(float amount)
+{
+}
+void ATestChar::MoveRight(float amount)
+{
+}
+void ATestChar::Turn(float amount)
+{
+}
+void ATestChar::LookUp(float amount)
+{
+}
+
 // Called when the game starts or when spawned
 void ATestChar::BeginPlay()
 {
