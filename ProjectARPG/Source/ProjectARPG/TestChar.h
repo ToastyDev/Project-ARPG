@@ -28,6 +28,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Components")
 	UCameraComponent* Camera;
 
+	//movement functions
+
+	//crouch function
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
