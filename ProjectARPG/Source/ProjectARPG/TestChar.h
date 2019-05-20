@@ -5,6 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Classes/Camera/CameraComponent.h"
+#include "Classes/Components/InputComponent.h"
+#include "GameFramework/Controller.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 #include "TestChar.generated.h"
 
@@ -23,10 +26,12 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	/*
 	UPROPERTY(EditAnywhere, Category = "Components")
 	UStaticMeshComponent* AMesh;
 	UPROPERTY(EditAnywhere, Category = "Components")
 	UCameraComponent* Camera;
+	*/
 
 	//movement functions
 	void MoveForward(float amount);
@@ -36,11 +41,11 @@ protected:
 	void Turn(float amount);
 	void LookUp(float amount);
 
+	//creating and setting the movement system
+	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 };
