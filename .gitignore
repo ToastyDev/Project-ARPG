@@ -6,6 +6,10 @@
 *.sln
 *.sdf
 *.suo
-
+*.ipch
 
 *.vc.db
+*.vc.db-wal
+*.vc.db-shm
+
+*/Content/ProtoCharacters/*
